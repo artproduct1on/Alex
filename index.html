@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ua"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Перевірка На Старість!</title></head>
+<body>
+	<style>
+		html {
+			line-height: 1.15;
+			-webkit-text-size-adjust: 100%;
+		}
+			
+			body {
+				margin: 0;
+			}
+			
+			main {
+				display: block;
+			}
+			
+			h1 {
+				font-size: 2em;
+				margin: 0.67em 0;
+			}
+			
+			hr {
+				box-sizing: content-box;
+				height: 0;
+				overflow: visible;
+			}
+			
+			pre {
+				font-family: monospace, monospace;
+				font-size: 1em;
+			}
+			
+			a {
+				background-color: transparent;
+			}
+			
+			abbr[title] {
+				border-bottom: none;
+				text-decoration: underline;
+				-webkit-text-decoration: underline dotted;
+								text-decoration: underline dotted;
+			}
+			
+			b,
+			strong {
+				font-weight: bolder;
+			}
+			
+			code,
+			kbd,
+			samp {
+				font-family: monospace, monospace;
+				font-size: 1em;
+			}
+			
+			small {
+				font-size: 80%;
+			}
+			
+			sub,
+			sup {
+				font-size: 75%;
+				line-height: 0;
+				position: relative;
+				vertical-align: baseline;
+			}
+			
+			sub {
+				bottom: -0.25em;
+			}
+			
+			sup {
+				top: -0.5em;
+			}
+			
+			img {
+				border-style: none;
+			}
+			
+			button,
+			input,
+			optgroup,
+			select,
+			textarea {
+				font-family: inherit;
+				font-size: 100%;
+				line-height: 1.15;
+				margin: 0;
+			}
+			
+			button,
+			input {
+				overflow: visible;
+			}
+			
+			button,
+			select {
+				text-transform: none;
+			}
+			
+			button::-moz-focus-inner,
+			[type=button]::-moz-focus-inner,
+			[type=reset]::-moz-focus-inner,
+			[type=submit]::-moz-focus-inner {
+				border-style: none;
+				padding: 0;
+			}
+			
+			button:-moz-focusring,
+			[type=button]:-moz-focusring,
+			[type=reset]:-moz-focusring,
+			[type=submit]:-moz-focusring {
+				outline: 1px dotted ButtonText;
+			}
+			
+			fieldset {
+				padding: 0.35em 0.75em 0.625em;
+			}
+			
+			legend {
+				box-sizing: border-box;
+				color: inherit;
+				display: table;
+				max-width: 100%;
+				padding: 0;
+				white-space: normal;
+			}
+			
+			progress {
+				vertical-align: baseline;
+			}
+			
+			textarea {
+				overflow: auto;
+			}
+			
+			[type=checkbox],
+			[type=radio] {
+				box-sizing: border-box;
+				padding: 0;
+			}
+			
+			[type=number]::-webkit-inner-spin-button,
+			[type=number]::-webkit-outer-spin-button {
+				height: auto;
+			}
+			
+			[type=search]::-webkit-search-decoration {
+				-webkit-appearance: none;
+			}
+			
+			::-webkit-file-upload-button {
+				-webkit-appearance: button;
+				font: inherit;
+			}
+			
+			details {
+				display: block;
+			}
+			
+			summary {
+				display: list-item;
+			}
+			
+			template {
+				display: none;
+			}
+			
+			[hidden] {
+				display: none;
+			}
+			
+			html {
+				font-family: Arial, Helvetica, sans-serif;
+				font-optical-sizing: auto;
+				font-weight: 700;
+				font-style: normal;
+				font-size: 62.5%;
+			}
+			
+			body {
+				background-color: rgb(255, 255, 255);
+				animation: startAnim 1s linear;
+			}
+			
+			@keyframes startAnim {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.section {
+				display: flex;
+				justify-content: center;
+			}
+			
+			.container {
+				padding: 1rem 0;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				width: 97%;
+			}
+			
+			.img {
+				width: 100%;
+				max-width: 40rem;
+			}
+			
+			.answer {
+				display: flex;
+				justify-content: center;
+				align-items: flex-end;
+				gap: 1rem;
+				border-bottom: 0.1rem solid red;
+			}
+			
+			.answer__input {
+				width: 100%;
+				max-width: 25rem;
+				outline: none;
+				border: none;
+				font-size: 2.2rem;
+				height: -moz-min-content;
+				height: min-content;
+				padding: 0.5rem 1rem;
+			}
+			
+			.count {
+				margin: 0;
+				height: -moz-min-content;
+				height: min-content;
+				display: flex;
+				justify-content: center;
+				gap: 0.5rem;
+				font-size: 1.6rem;
+			}
+			
+			.text {
+				text-align: center;
+				font-size: 2.4rem;
+				max-width: 50rem;
+			}
+			
+			::-webkit-scrollbar {
+				width: 0.6rem;
+				height: 0.8rem;
+			}
+			
+			::-webkit-scrollbar-track {
+				box-shadow: inset 0 0 0.4rem rgba(121, 121, 121, 0.5);
+			}
+			
+			::-webkit-scrollbar-thumb {
+				background: rgb(63, 63, 63);
+			}
+			
+			::-moz-selection {
+				background-color: rgb(71, 71, 71);
+				color: white;
+			}
+			
+			::selection {
+				background-color: rgb(71, 71, 71);
+				color: white;
+			}
+			
+			@media (min-width: 480px) {
+				.container {
+					width: 95%;
+				}
+			}
+			@media (min-width: 768px) {
+				html {
+					font-size: 70%;
+				}
+			}
+			@media (min-width: 1025px) {
+				.container {
+					width: 85%;
+				}
+			}
+			@media (min-width: 1367px) {
+				html {
+					font-size: 67.5%;
+				}
+			}
+			@media screen and (min-width: 1500px) {
+				html {
+					font-size: 70%;
+				}
+				.container {
+					width: 110rem;
+				}
+			}
+			@media screen and (min-width: 2000px) {
+				html {
+					font-size: 75%;
+				}
+			}
+	</style>
+	<!-- ------------- -->
+	<section class="section">
+		<div class="container">
+			<p class="count">
+				Частина <span class="count__entered--main">0</span> з
+				<span class="count__all--main">0</span>
+			</p>
+			<img class="img" src="">
+			<div class="answer">
+				<input 
+					class="answer__input"
+					required
+					type="text"
+					placeholder="Пиши тут..."
+				>
+				<p class="count">
+					<span class="count__entered--answer">0</span> з 
+					<span class="count__all--answer">0</span>
+				</p>
+			</div>
+			<p class="text">Сашко, прийшов той час</p>
+		</div>
+	</section>
+	<!-- ------------- -->
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			const punkts = [
+				{
+					id: 1,
+					text: "Сашко, прийшов той час, коли потрібно найти пенсійний фонд та питати у молоді як користуватись девайсом! Давай перевіремо твої занання. - Де новий рік починається 1-го вересня?",
+					img: "https://i.gifer.com/embedded/download/7Fa5.gif",
+					answer: "школа",
+				},
+				{
+					id: 2,
+					text: "Молодець) Є ще порох. Тоді трохи нейропластики у студію: Понад усе це в спеку цінують! Що це?",
+					img: "https://cs9.pikabu.ru/post_img/2016/11/29/7/1480417992171891768.gif",
+					answer: "вода",
+				},
+				{
+					id: 3,
+					text: "Gut gemacht! Бажаю, щоб вода перетворювалась на вино для тебе! А-ну наступне: Без мене день не починається.",
+					img: "https://i.gifer.com/origin/c0/c00f655d27d446de68a12fb5b76c7c41_w200.gif",
+					answer: "сонце",
+				},
+				{
+					id: 4,
+					text: "Па-га-ді, куди? Сюдии. Нехай Сонце зігріває тебе і твою родину! Давай трохи ускладнемо. В якому треку Емінем найшвидше читає куплет? *відповідай англійською",
+					img: "https://i.gifer.com/T2bR.gif",
+					answer: "Godzilla",
+				},
+				{
+					id: 5,
+					text: "Не погано! Бажаю тобі не швидким бути, а як Ґодзілла 😏. Давай полегше. Хто путін?",
+					img: "https://i.gifer.com/origin/86/864c7943338285fb1ad69efc81331321_w200.gif",
+					answer: "хуйло",
+				},
+				{
+					id: 6,
+					text: "Правильно. Бажаю тобі не зустрічати таких людей в житті! Тож на останок: Ісаак Ньютон сформулював закон, що описує, як масивні об'єкти взаємодіють один з одним. Як назвати це явище одним словом?",
+					img: "https://i.makeagif.com/media/12-17-2015/9ibhOC.gif",
+					answer: "гравітація",
+				},
+				{
+					id: 7,
+					text: "Я бажаю тобі не відчувати гравітацію підн ногами від часу проведеного з важливими для тебе людьми. З Днем Народження!",
+					img: "https://i.gifer.com/7E4Y.gif",
+					answer: "",
+				},
+			]
+			let isActive = 0;
+			const img = document.querySelector(".img"),
+					answerBlock = document.querySelector(".answer"),
+					answerInput = document.querySelector(".answer__input"),
+					countAllMain = document.querySelector(".count__all--main"),
+					countEnteredMain = document.querySelector(".count__entered--main"),
+					countAllAnswer = document.querySelector(".count__all--answer"),
+					countEnteredAnswer = document.querySelector(".count__entered--answer"),
+					text = document.querySelector(".text");
+			countAllMain.textContent = punkts.length;
+			const fillingFunction = (item) => {
+				img.src = item.img;
+				countEnteredAnswer.textContent = 0;
+				countAllAnswer.textContent = item.answer.length;
+				countEnteredMain.textContent = isActive + 1;
+				answerInput.value = "";
+				text.textContent = item.text;
+				if (punkts.length <= isActive+1) {
+					answerBlock.style.display = "none"
+				}
+
+			};
+			fillingFunction(punkts[isActive]);
+			answerInput.addEventListener("input", (e) => {
+				const value = e.target.value;
+				countEnteredAnswer.textContent = value.length;
+				if (value.toLowerCase() === punkts[isActive].answer.toLowerCase()) {
+					isActive ++;
+					fillingFunction(punkts[isActive])
+				}
+			});
+		});
+	</script>
+</body>
+</html>
