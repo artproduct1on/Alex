@@ -332,48 +332,48 @@
 				{
 					id: 1,
 					text: "Сашко, прийшов той час, коли потрібно найти пенсійний фонд та питати у молоді як користуватись девайсом! Давай перевіремо твої занання. - Де новий рік починається 1-го вересня?",
-					img: "https://i.gifer.com/embedded/download/7Fa5.gif",
+					img: "./assets/1.gif",
 					answer: "школа",
 				},
 				{
 					id: 2,
 					text: "Молодець) Є ще порох. Тоді трохи нейропластики у студію: Понад усе це в спеку цінують! Що це?",
-					img: "https://cs9.pikabu.ru/post_img/2016/11/29/7/1480417992171891768.gif",
+					img: "./assets/2.gif",
 					answer: "вода",
 				},
 				{
 					id: 3,
 					text: "Gut gemacht! Бажаю, щоб вода перетворювалась на вино для тебе! А-ну наступне: Без мене день не починається.",
-					img: "https://i.gifer.com/origin/c0/c00f655d27d446de68a12fb5b76c7c41_w200.gif",
+					img: "./assets/3.gif",
 					answer: "сонце",
 				},
 				{
 					id: 4,
 					text: "Па-га-ді, куди? Сюдии. Нехай Сонце зігріває тебе і твою родину! Давай трохи ускладнемо. В якому треку Емінем найшвидше читає куплет? *відповідай англійською",
-					img: "https://i.gifer.com/T2bR.gif",
+					img: "./assets/4.gif",
 					answer: "Godzilla",
 				},
 				{
 					id: 5,
 					text: "Не погано! Бажаю тобі не швидким бути, а як Ґодзілла 😏. Давай полегше. Хто путін?",
-					img: "https://i.gifer.com/origin/86/864c7943338285fb1ad69efc81331321_w200.gif",
+					img: "./assets/5.gif",
 					answer: "хуйло",
 				},
 				{
 					id: 6,
 					text: "Правильно. Бажаю тобі не зустрічати таких людей в житті! Тож на останок: Ісаак Ньютон сформулював закон, що описує, як масивні об'єкти взаємодіють один з одним. Як назвати це явище одним словом?",
-					img: "https://i.makeagif.com/media/12-17-2015/9ibhOC.gif",
+					img: "./assets/6.gif",
 					answer: "гравітація",
 				},
 				{
 					id: 7,
 					text: "Я бажаю тобі не відчувати гравітацію під ногами від часу проведеного з важливими для тебе людьми. З Днем Народження!",
-					img: "https://i.gifer.com/7E4Y.gif",
+					img: "./assets/7.gif",
 					answer: "",
 				},
 			]
 			let isActive = 0;
-			const img = document.querySelector(".img"),
+			const 	img = document.querySelector(".img"),
 					answerBlock = document.querySelector(".answer"),
 					answerInput = document.querySelector(".answer__input"),
 					countAllMain = document.querySelector(".count__all--main"),
@@ -381,7 +381,9 @@
 					countAllAnswer = document.querySelector(".count__all--answer"),
 					countEnteredAnswer = document.querySelector(".count__entered--answer"),
 					text = document.querySelector(".text");
+
 			countAllMain.textContent = punkts.length;
+
 			const fillingFunction = (item) => {
 				img.src = item.img;
 				countEnteredAnswer.textContent = 0;
@@ -392,7 +394,6 @@
 				if (punkts.length <= isActive+1) {
 					answerBlock.style.display = "none"
 				}
-
 			};
 			fillingFunction(punkts[isActive]);
 			answerInput.addEventListener("input", (e) => {
